@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+        .confirmation-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .confirmation-container img {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+        .confirmation-container p {
+            margin: 5px 0;
+        }
+        .confirmation-container .success-icon {
+            font-size: 3em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <div class="confirmation-container">
+        <p class="success-icon">✔️</p>
+        <img id="sticker-image" src="" alt="Sticker Image">
+        <p id="sticker-price"></p>
+        <p id="sticker-quantity"></p>
+        <p id="customer-name"></p>
+        <p id="monopoly-link"></p>
+        <p id="payment-method"></p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const quantity = urlParams.get('quantity');
+        const price = urlParams.get('price');
+        const imageSrc = urlParams.get('imageSrc');
+        const name = urlParams.get('name');
+        const monopolyLink = urlParams.get('monopolyLink');
+        const paymentMethod = urlParams.get('paymentMethod');
+
+        document.getElementById('sticker-image').src = imageSrc;
+        document.getElementById('sticker-price').textContent = 'Price: $' + price;
+        document.getElementById('sticker-quantity').textContent = 'Quantity: ' + quantity;
+        document.getElementById('customer-name').textContent = 'Name: ' + name;
+        document.getElementById('monopoly-link').textContent = 'Monopoly Link: ' + monopolyLink;
+        document.getElementById('payment-method').textContent = 'Payment Method: ' + paymentMethod;
+    </script>
+</body>
+</html>

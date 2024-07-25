@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+        .instructions-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            height: 500px;
+            padding: 0px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .instructions-container p {
+            margin-top: 50px;
+        }
+        .instructions-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .instructions-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .instructions-container img {
+            width: 30%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Instructions</h1>
+    <div class="instructions-container">
+        <h2>Send payment to the following:</h2>
+        <p style="font-weight: 600;">Paypal: robinzxaredjaymallillin@gmail.com</p>
+        <img src="venmo.jpg" alt="Venmo" style="width: 60px;">
+        <img src="cashapp.jpeg" alt="CashApp">
+        <p>Please include your order details in the payment note.</p>
+        <button id="complete-payment">Payment Completed</button>
+    </div>
+
+    <script>
+        document.getElementById('complete-payment').addEventListener('click', function() {
+            window.location.href = 'confirmation-message.html';
+        });
+    </script>
+</body>
+</html>

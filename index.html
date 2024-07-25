@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly Sticker Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+        .shop-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+        .sticker-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 20%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .sticker-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .sticker-item .price {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .sticker-item .quantity {
+            margin-bottom: 10px;
+        }
+        .sticker-item .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .sticker-item .add-to-cart:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <img src="mono-Photoroom.png" style="width: 10%; margin-top: 20px;" alt="Shop Logo">
+    <h1 style="font-weight: 900; font-style: oblique;">Kurt's Sticker Shop & Services</h1>
+
+    <div class="shop-container">
+        <div class="sticker-item">
+            <img src="0c43487a-0ff4-4206-8078-a15484b41394.jpg" alt="Sticker 1">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Repeat similar blocks for other stickers -->
+        <!-- ... -->
+        <div class="sticker-item">
+            <img src="1da6a49b-50fe-442c-8bbc-a974e35c0fc8.jpg" alt="Sticker 2">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="5d6065c4-c146-43ab-a464-5b97c60f85f5.jpg" alt="Sticker 3">
+            <div class="price">$5.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="8f23b267-9208-4394-a0f6-18f12d4f4219.jpg" alt="Sticker 4">
+            <div class="price">$$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="shop-container">
+        <div class="sticker-item">
+            <img src="57f9a96b-95d9-4e22-8dec-2171ee0b66c0.jpg" alt="Sticker 1">
+            <div class="price">$5.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="71f67447-31a5-43f1-82b7-94543e081cdb.jpg" alt="Sticker 2">
+            <div class="price">$5.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="0174cb0f-5336-458d-a82f-b594d9eb8926.jpg" alt="Sticker 3">
+            <div class="price">$5.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="467f143a-8431-4cb8-9fcd-f4dfdd1a4951.jpg" alt="Sticker 4">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="shop-container">
+        <div class="sticker-item">
+            <img src="25524e99-ca0f-43e5-a7bd-9b072ae4a7b1.jpg" alt="Sticker 1">
+            <div class="price">$5.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="865591c1-e178-4ce3-b1e4-f12f44fa4788..jpg" alt="Sticker 2">
+            <div class="price">$6.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="a73849e9-f81c-45a0-9334-5223eb6ba57a.jpg" alt="Sticker 3">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="b8bfab4b-c615-44e4-aab7-231225905001.jpg" alt="Sticker 4">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="shop-container">
+        <div class="sticker-item">
+            <img src="d3e2299b-09ef-492d-84b7-fff9f95ee5da.jpg" alt="Sticker 1">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="decff428-f8a4-442a-bc18-3c3706014c2a.jpg" alt="Sticker 2">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="fa0dd0c8-53a9-4522-b9da-dc4eccb46754.jpg" alt="Sticker 3">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="sticker-item">
+            <img src="fba48d28-0dbf-4b51-a052-c9c6baa792c8.jpg" alt="Sticker 4">
+            <div class="price">$4.00</div>
+            <input type="number" class="sticker-quantity" value="1" min="1" style="width: 60px; margin-bottom: 10px;">
+            <button class="add-to-cart">Add to Cart</button>
+    </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const item = this.closest('.sticker-item');
+                const quantity = item.querySelector('.sticker-quantity').value;
+                const price = item.querySelector('.price').innerText;
+                const imageSrc = item.querySelector('img').src;
+
+                const orderData = {
+                    imageSrc: imageSrc,
+                    price: price,
+                    quantity: quantity
+                };
+
+                localStorage.setItem('orderData', JSON.stringify(orderData));
+                window.location.href = 'order.html';
+            });
+        });
+    </script>
+</body>
+</html>

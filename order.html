@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+        .order-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        .order-container img {
+            width: 25%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .order-container .details {
+            margin: 20px 0;
+        }
+        .order-container .details p {
+            margin: 5px 0;
+        }
+        .order-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .order-container .payment-methods {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .order-container .payment-methods label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .order-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .order-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <img id="order-image" src="" alt="Sticker Image">
+        <div class="details">
+            <p id="order-price"></p>
+            <p id="order-quantity"></p>
+            <input type="text" id="customer-name" placeholder="Enter your name">
+            <input type="text" id="monopoly-link" placeholder="Enter your Monopoly Go link">
+        </div>
+        <div class="payment-methods">
+            <p>Select your payment method:</p>
+            <label><input type="radio" name="payment-method" value="PayPal"> PayPal</label>
+            <label><input type="radio" name="payment-method" value="Venmo"> Venmo</label>
+            <label><input type="radio" name="payment-method" value="Cash App"> Cash App</label>
+        </div>
+        <button id="confirm-order">Confirm Order</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderData = JSON.parse(localStorage.getItem('orderData'));
+
+            if (orderData) {
+                document.getElementById('order-image').src = orderData.imageSrc;
+                document.getElementById('order-price').innerText = `Price: ${orderData.price}`;
+                document.getElementById('order-quantity').innerText = `Quantity: ${orderData.quantity}`;
+            }
+
+            document.getElementById('confirm-order').addEventListener('click', function () {
+                const name = document.getElementById('customer-name').value;
+                const monopolyLink = document.getElementById('monopoly-link').value;
+                const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+
+                if (name && monopolyLink && paymentMethod) {
+                    localStorage.setItem('customerInfo', JSON.stringify({
+                        name: name,
+                        monopolyLink: monopolyLink,
+                        paymentMethod: paymentMethod.value
+                    }));
+                    window.location.href = 'payment-instructions.html';
+                } else {
+                    alert('Please fill in all fields and select a payment method.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

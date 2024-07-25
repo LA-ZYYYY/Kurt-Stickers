@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Problem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+        .report-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .report-container input,
+        .report-container textarea,
+        .report-container button {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .report-container textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .report-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .report-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report a Problem</h1>
+    <div class="report-container">
+        <form action="mailto:robinzxaredjaymallillin@gmail.com" method="post" enctype="text/plain">
+            <label for="email" style="font-weight: 700;
+            font-size: 20px;" >My Email:</label>
+            <h2>aaron.mallillin45@gmail.com</h2>
+            <label for="problem" style="font-weight: 600;">Describe the Problem:</label>
+            <textarea id="problem" name="problem" required></textarea>
+            
+            <label for="facebook" style="font-weight: 700;
+            font-size: 20px;">Facebook Page:</label>
+            <h2>Monopoly GO (https://www.facebook.com/profile.php?id=61563100265225)</h2>
+            
+            <button type="submit">Send Report</button>
+        </form>
+    </div>
+</body>
+</html>
